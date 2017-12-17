@@ -1,9 +1,11 @@
 package com.example.demo;
 
+import java.io.Serializable;
+
 /**
  * @author 会飞的狼 on 2017/12/16.
  */
-public class User {
+public class User implements Serializable {
 
     private Long id;
     private String name;
