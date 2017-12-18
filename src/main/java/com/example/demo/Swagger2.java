@@ -21,14 +21,14 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.didispace.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.demo"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("会飞的狼Demo")
+                .title("会飞的狼测试示例")
                 .description("会飞的狼")
                 .termsOfServiceUrl("会飞的狼")
                 .contact("会飞的狼")

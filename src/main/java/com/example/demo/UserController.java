@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -11,21 +12,20 @@ import java.util.*;
 /**
  * @author 会飞的狼 on 2017/12/16.
  */
-
 @RestController
+@Api(value = "用户信息", description = "用户模块")
 @RequestMapping(value="/users")
-@Api(value = "users")
 public class UserController {
     static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
-    @ApiOperation(value="获取用户列表", notes="")
+    @ApiOperation(value="获取用户列表", notes="获取用户列表", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @RequestMapping(value={""}, method= RequestMethod.GET)
     public List<User> getUserList() {
         List<User> r = new ArrayList<User>(users.values());
         return r;
     }
 
-    @ApiOperation(value="创建用户", notes="根据User对象创建用户")
+    @ApiOperation(value="创建用户", notes="根据User对象创建用户", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User")
     @RequestMapping(value="", method=RequestMethod.POST)
     public String postUser(@RequestBody User user) {
@@ -33,7 +33,7 @@ public class UserController {
         return "success";
     }
 
-    @ApiOperation(value="获取用户详细信息", notes="根据url的id来获取用户详细信息")
+    @ApiOperation(value="获取用户详细信息", notes="根据url的id来获取用户详细信息",  produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long")
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public User getUser(@PathVariable Long id) {
