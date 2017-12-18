@@ -19,7 +19,7 @@ import java.util.*;
 @RequestMapping(value="/users")
 public class UserController {
 
-    private Logger logger = LoggerFactory.getLogger(HelloController.class);
+    private Logger logger = LoggerFactory.getLogger(UserController.class);
 
     static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
