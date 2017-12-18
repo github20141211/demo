@@ -61,4 +61,12 @@
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>
+    <root level="stdout">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+    <root level="file">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
 </configuration>
