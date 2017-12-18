@@ -20,6 +20,7 @@ public class HelloController {
     @ApiOperation(value="Hello", notes="Hello示例")
     public String index() {
         logger.info("访问 /hello");
+        System.out.println("SOUT访问 /hello");
         return "Hello World";
     }
 }
