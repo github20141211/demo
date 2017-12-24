@@ -11,14 +11,6 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 
-	<repositories>
-		<repository>
-			<id>nexus</id>
-			<name>Nexus Repository</name>
-			<url>http://103.45.10.141:8888/nexus/content/groups/public</url>
-		</repository>
-	</repositories>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
