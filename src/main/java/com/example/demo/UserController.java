@@ -31,6 +31,15 @@ public class UserController {
         return r;
     }
 
+    @ApiOperation(value="获取用户列表ById", notes="通过id获取用户列表", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value="/getUserById", method= RequestMethod.GET)
+    public List<User> getUserById() {
+        logger.info("----->" , "获取用户列表");
+        List<User> r = new ArrayList<User>(users.values());
+        return r;
+    }
+
+
     @ApiOperation(value="创建用户", notes="根据User对象创建用户", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User")
     @RequestMapping(value="", method=RequestMethod.POST)
