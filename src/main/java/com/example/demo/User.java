@@ -7,7 +7,12 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    private Long id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4918499030158628627L;
+	
+	private Long id;
     private String name;
     private Integer age;
 
