@@ -18,7 +18,7 @@ public class RouteController {
     public static final Logger logger = LoggerFactory.getLogger(RouteController.class);
 
     // 需要改成自身应用的appSecret
-    private final String appSecret = "9072b51ecbb0";
+    private final String appSecret = "45a9b88d1a0a";
 
     @RequestMapping(value = {"/mockClient.action"}, method = {RequestMethod.POST})
     @ResponseBody
